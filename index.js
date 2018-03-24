@@ -1,7 +1,4 @@
-var rect = {
-    parimeter: (x,y) => (2*(x+y)),
-    area: (x,y) => (x*y)
-};
+var rect = require("./rect");
 
 function solveRect(l,b){
     console.log(" l= "+l+" b= "+b);
