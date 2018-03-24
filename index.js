@@ -3,13 +3,16 @@ var rect = require("./rect");
 function solveRect(l,b){
     console.log(" l= "+l+" b= "+b);
     
-    if (l <= 0 || b <=0){
-        console.log("rect dimensions should be grater than zero");
-    }
-    else {
-        console.log("The area of the rect is "+rect.area(l,b));
-        console.log("The parimeter of the rect is "+rect.parimeter(l,b));
-    }
+    rect(l,b,(err,rect) => {
+       
+        if(err){
+            console.log("the error: "+err.message);
+        }
+        else {
+            console.log("the rect area is "+rect.area());
+        }
+    });
+    console.log("call after rect");
 }
 
 solveRect(2,4);
